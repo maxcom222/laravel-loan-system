@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------------------
+*
+*  # Toolbars
+*
+*  Custom toolbars, mainly based on navbar component
+*
+*  Version: 1.0
+*  Latest update: Dec 5, 2016
+*
+* ---------------------------------------------------------------------------- */
+
+
+// Base
+// ------------------------------
+
+.panel-toolbar-inbox {
+
+	// Add top border radius if first in panel
+	.panel > &:first-child {
+		.border-top-radius(@border-radius-base);
+	}
+
+	// Make navbar transparent
+	> .navbar {
+		background-color: transparent;
+		border-width: 0;
+		.box-shadow(none);
+	}
+
+	// Desktop view
+    @media (min-width: @grid-float-breakpoint) {
+        padding-top: (@line-height-computed / 2);
+        padding-bottom: (@line-height-computed / 2);
+    }
+}
